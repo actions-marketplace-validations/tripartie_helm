@@ -16,4 +16,6 @@ RUN npm install
 COPY index.js ./
 COPY ./charts ./charts
 
-ENTRYPOINT ["node", "index.js"]
+RUN npm link
+
+ENTRYPOINT ["helm-deploy"]
