@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.7.1](https://github.com/glopezep/helm/compare/v1.8.0...v1.7.1) (2022-01-24)
+### [2.0.0](https://github.com/tripartie/helm/compare/v1.8.0...v2.0.0) (2023-02-21)
+
+### Changes
+
+* Upgrade to Alpine 3.17
+* Upgrade Helm to v3.11
+
+### Removed
+
+* Helm v2 Support, thus helm argument in action (breaking change)
+
+### [1.8.0](https://github.com/glopezep/helm/compare/v1.7.1...v1.8.0) (2022-01-24)
+
+### Bug Fixes
+
+* glopezep fork
 
 ## [1.7.0](https://github.com/deliverybot/helm/compare/v1.6.1...v1.7.0) (2021-01-09)
 

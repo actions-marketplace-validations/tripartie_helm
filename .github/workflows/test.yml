@@ -7,10 +7,13 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
-    - uses: 'actions/checkout@v1'
+    - uses: 'actions/checkout@v3'
 
     - name: 'Build'
       run: 'docker build -t helm .'
+
+    - name: Dependencies Installation
+      run: npm install
 
     - name: 'Test commands'
       run: 'docker run --rm -i -v $PWD:/workspace --workdir=/workspace --entrypoint=/workspace/tests/test-snap.sh helm'
@@ -19,7 +22,4 @@ jobs:
       run: 'docker run --rm -i -v $PWD:/workspace --workdir=/workspace --entrypoint=/workspace/tests/charts/test.sh helm'
 
     - name: 'Test helm version'
-      run: 'docker run --rm -i --entrypoint=helm helm version -c'
-
-    - name: 'Test helm3 version'
-      run: 'docker run --rm -i --entrypoint=helm3 helm version'
+      run: 'docker run --rm -i --entrypoint=helm helm version'
