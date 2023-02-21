@@ -1,8 +1,9 @@
-name: Deliverybot Helm Action forked by glopezep
+name: Deliverybot Helm Action Fork by Tripartie
 description: Deploys a helm chart
-author: glopezep
-icon: box
-color: gray-dark
+author: tripartie
+branding:
+  icon: 'upload-cloud'
+  color: 'yellow'
 inputs:
   release:
     description: Helm release name. Will be combined with track if set. (required)
@@ -26,9 +27,6 @@ inputs:
     required: false
   atomic:
     description: If true, upgrade process rolls back changes made in case of failed upgrade. Defaults to true.
-    required: false
-  helm:
-    description: Helm binary to execute, one of [helm, helm3].
     required: false
   token:
     description: Github repository token. If included and the event is a deployment
